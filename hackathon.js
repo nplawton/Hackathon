@@ -1,27 +1,6 @@
 //console.log('I\'m Alive!');
 
-
-
-//global variables
-const $fireBall = $('#fireSpell');
-const $fireButton = $('#fire');
-
-const $iceBolt = $('#iceSpell');
-const $iceButton = $('#ice');
-
-const $lightning = $('#lightSpell');
-const $lightButton = $('#lightning');
-
-const $wind = $('#windSpell');
-const $windButton = $('#wind');
-
-//setting initial class for spells to hidden
-$fireBall.addClass('hidden');
-$iceBolt.addClass('hidden');
-$lightning.addClass('hidden');
-$wind.addClass('hidden');
-
-
+//Sound Manager object to hold all sounds for the project -- Autoplay is default to true -- loop set to false to prevent it from looping
 var sound = {
     fire: new Howl({
         src: ['./Sounds/Fireball.mp3'],
@@ -54,12 +33,23 @@ var sound = {
 };
 
 //console.log($playButton);
+
+//Fire Based Parameters
+//Establish fire image and button
+const $fireBall = $('#fireSpell');
+const $fireButton = $('#fire');
+
+//setting initial class for spells to hidden
+$fireBall.addClass('hidden');
+
+//Event when fire button is activated
 $fireButton.click(() => {
     //console.log('I\'m Alive!');
     sound.fire.play();
     showFire();
 });
 
+//Fire image display class switched. ******Remember to identify the display css to make this work******
 function showFire() {
     console.log('Fire Magic');
     $fireBall.removeClass("hidden");
@@ -70,6 +60,12 @@ function showFire() {
         $fireBall.removeClass("unhidden");
     }, 5000);
 }
+
+//Ice Based Parameters
+const $iceBolt = $('#iceSpell');
+const $iceButton = $('#ice');
+
+$iceBolt.addClass('hidden');
 
 $iceButton.click(() => {
     //console.log('I\'m Alive!');
@@ -88,6 +84,13 @@ function showIce() {
     }, 5000);
 }
 
+
+//Lightning Based Parameters
+const $lightning = $('#lightSpell');
+const $lightButton = $('#lightning');
+
+$lightning.addClass('hidden');
+
 $lightButton.click(() => {
     //console.log('I\'m Alive!');
     sound.light.play();
@@ -104,6 +107,12 @@ function showLightning() {
         $lightning.removeClass("unhidden");
     }, 5000);
 }
+
+//Wind Based Parameters
+const $wind = $('#windSpell');
+const $windButton = $('#wind');
+
+$wind.addClass('hidden');
 
 $windButton.click(() => {
     //console.log('I\'m Alive!');

@@ -10,25 +10,57 @@ body{
     );
 }
 
+.title{
+    color: beige;
+    text-align: center;
+}
+
 .fire{
     background-color: red;
-    border-radius: 50%;
+    border-radius: 25%;
+}
+
+.fireSpell{
+    position: absolute;
+    left: 250px;
+    bottom: 120px;
 }
 
 .ice{
     background-color: cyan;
-    border-radius: 50%;
+    border-radius: 25%;
+}
+
+.iceSpell{
+    position: absolute;
+    left: 250px;
+    bottom: 200px;
+    height: 20%;
 }
 
 .lightning{
     background-color: yellow;
-    border-radius: 50%;
+    border-radius: 25%;
+}
+
+.lightSpell{
+    position: absolute;
+    left: 250px;
+    bottom: 200px;
+    height: 20%;
 }
 
 .wind{
     background-color: rgb(52, 52, 49);
     color: white;
-    border-radius: 50%;
+    border-radius: 25%;
+}
+
+.windSpell{
+    position: absolute;
+    left: 250px;
+    bottom: 200px;
+    height: 20%;
 }
 
 .player{
@@ -41,33 +73,6 @@ body{
     bottom: 15px;
     right: 16px;
     height: 90%;
-}
-
-.fireSpell{
-    position: absolute;
-    left: 250px;
-    bottom: 120px;
-}
-
-.iceSpell{
-    position: absolute;
-    left: 250px;
-    bottom: 200px;
-    height: 20%;
-}
-
-.lightSpell{
-    position: absolute;
-    left: 250px;
-    bottom: 200px;
-    height: 20%;
-}
-
-.windSpell{
-    position: absolute;
-    left: 250px;
-    bottom: 200px;
-    height: 20%;
 }
 
 .hidden{
